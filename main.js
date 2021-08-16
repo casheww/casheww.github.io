@@ -1,4 +1,5 @@
 
+/*
 function getGithubStuff() {
     let client = new XMLHttpRequest();
     client.open("GET", "https://api.github.com/users/casheww");
@@ -19,4 +20,4 @@ function stuff() {
     getGithubStuff();
     
 }
-
+*/

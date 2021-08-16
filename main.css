@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 :root {
   --bg: #141410;
-  --bg1: #20201acb;
-  --fg: #ccb;
-  --fg2: rgb(187, 179, 201);
+  --bg1: #2c2c2acb;
+  --fg: rgb(226, 226, 176);
+  --fg1: rgb(190, 240, 160);
+
+  --url: rgb(172, 217, 220);
+  --url-visited: rgb(196, 172, 220);
 
   font-size: 1.05em;
 }
@@ -12,44 +15,44 @@
 body {
   background-color: var(--bg);
   color: var(--fg);
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 #main {
   background-color: var(--bg1);
-  width: 55%;
+  width: 70%;
   margin: auto;
-  margin-top: 2%;
-  margin-right: 25%;
+  margin-top: 20px;
+  padding: 10px 10px 30px 10px;
+  border-radius: 5px;
 }
-h1 {
-  padding-top: 2%;
+h1, h2, h3, h4, h5, h6, p {
+  padding: 7px;
   margin: auto;
-  width: 10em;
 }
-p {
-  padding: 1% 20% 5% 23%;
-}
+h1 { padding-left: 25px; }
+h2 { padding-left: 30px; }
+h3 { padding-left: 35px; }
+h4 { padding-left: 40px; }
+h5 { padding-left: 45px; }
+h6 { padding-left: 50px; }
+p  { padding-left: 55px; }
+ul { padding-left: 100px; }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex p {
-  padding: 15px 15px 15px 30px;
-}
-
-#github-pfp {
-  width: 104px;
-  height: 104px;
-  margin: 3% 3% 3% 8%;
-}
-#github-pfp img {
-  border-radius: 10%;
-  padding: 2%;
-  max-width: 100%;
+hr {
+  width: 95%;
 }
 
 me {
-  color: var(--fg2);
+  color: var(--fg1);
+}
+
+a {
+  color: var(--url);
+}
+a:visited {
+  color: var(--url-visited);
+}
+ul.project-list a {
+  color: var(--fg);
 }
