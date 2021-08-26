@@ -1,0 +1,28 @@
+
+name: gen-file-index
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  generate-indexing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: generate file indexing
+        working-directory: /
+        run: python3 /.github/workflows/fileIndexer.py
+        
+      - name: commit changes
+        uses: EndBug/add-and-commit@v6
+        with:
+          message: 'Automatically indexed files'
+          add: pages
+          default_author: github_actions
