@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: generate file indexing
-        working-directory: /
+        working-directory: ./
         run: python3 ./.github/workflows/fileTreeGen.py
         
       - name: commit changes
