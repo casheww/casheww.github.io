@@ -3,11 +3,12 @@
 :root {
   --bg: #141410;
   --bg1: #2c2c2acb;
-  --fg: rgb(226, 226, 176);
-  --fg1: rgb(190, 240, 160);
+  --fg: rgb(224, 224, 188);
+  --fg1: rgb(238, 182, 109);
+  --highlight: rgb(212, 182, 140);
 
   --url: rgb(172, 217, 220);
-  --url-visited: rgb(196, 172, 220);
+  --url-visited: rgb(209, 192, 226);
 
   font-size: 1.05em;
 }
@@ -23,36 +24,55 @@ body {
   width: 70%;
   margin: auto;
   margin-top: 20px;
-  padding: 10px 10px 30px 10px;
+  padding: 50px;
   border-radius: 5px;
 }
 h1, h2, h3, h4, h5, h6, p {
   padding: 7px;
   margin: auto;
 }
-h1 { padding-left: 25px; }
-h2 { padding-left: 30px; }
-h3 { padding-left: 35px; }
-h4 { padding-left: 40px; }
-h5 { padding-left: 45px; }
-h6 { padding-left: 50px; }
-p  { padding-left: 55px; }
-ul { padding-left: 100px; }
+h1 { padding-left: 0px; }
+h2 { padding-left: 5px; }
+h3 { padding-left: 10px; }
+h4 { padding-left: 15px; }
+h5 { padding-left: 20px; }
+h6 { padding-left: 25px; }
+p  { padding-left: 30px; }
+ul { padding-left: 50px; }
 
 hr {
   width: 95%;
 }
 
 me {
-  color: var(--fg1);
+  color: var(--highlight);
 }
 
 a {
   color: var(--url);
+  text-decoration: none;
 }
 a:visited {
   color: var(--url-visited);
 }
-ul.project-list a {
+a:hover {
+  text-decoration: underline var(--fg) dashed 1.2px;
+}
+.project-list a {
+  color: var(--fg1);
+}
+table.project-list {
+  margin-top: 25px;
+}
+td {
+  background-color: var(--bg);
+  padding: 20px;
+}
+
+.js-location {
+  padding: 15px 0 5px 100px;
+}
+.js-location a {
   color: var(--fg);
 }
+
